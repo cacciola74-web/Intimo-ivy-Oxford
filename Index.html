@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestione Copia Commissione - Evolution Time</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>EVOLUTION TIME S.R.L</h1>
+      <p>Gestione Ordini & Copia Commissione - Ivy Oxford</p>
+    </header>
+
+    <!-- Dati Cliente e Ordine -->
+    <section class="form-section">
+      <h2>Dati Ordine & Cliente</h2>
+      <div class="grid-form">
+        <div>
+          <label>Cliente:</label>
+          <input type="text" id="cliente" placeholder="Nome Cliente">
+        </div>
+        <div>
+          <label>Città:</label>
+          <input type="text" id="citta" placeholder="Città">
+        </div>
+        <div>
+          <label>P.IVA:</label>
+          <input type="text" id="piva" placeholder="Partita IVA">
+        </div>
+        <div>
+          <label>Codice Univoco / SDI:</label>
+          <input type="text" id="sdi" placeholder="Codice SDI">
+        </div>
+        <div>
+          <label>Data:</label>
+          <input type="date" id="data">
+        </div>
+        <div>
+          <label>Stagione:</label>
+          <input type="text" id="stagione" value="AUTUNNO/INVERNO 2026">
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabella Prodotti -->
+    <section class="table-section">
+      <h2>Articoli Inseriti</h2>
+      <table id="orderTable">
+        <thead>
+          <tr>
+            <th>Articolo</th>
+            <th>Descrizione</th>
+            <th>Composizione</th>
+            <th>Assortimento</th>
+            <th>Conf. (Pz)</th>
+            <th>Colli</th>
+            <th>Prezzo (€)</th>
+            <th>Totale (€)</th>
+            <th>Azione</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Righe inserite dinamicamente -->
+        </tbody>
+      </table>
+
+      <button class="btn-add" onclick="addRow()">+ Aggiungi Articolo</button>
+    </section>
+
+    <!-- Riepilogo e Totali -->
+    <section class="summary-section">
+      <div class="summary-box">
+        <h3>Riepilogo Ordine</h3>
+        <p>Totale Colli: <strong id="totalColli">0</strong></p>
+        <p>Totale Capi: <strong id="totalCapi">0</strong></p>
+        <p>Totale Importo: <strong id="totalPrice">€ 0,00</strong></p>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button class="btn-submit" onclick="saveOrder()">Salva Ordine</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
