@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestione Copia Commissione - Evolution Time</title>
+  <title>Copia Commissione - Evolution Time</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
   <div class="container">
     <header>
       <h1>EVOLUTION TIME S.R.L</h1>
-      <p>Gestione Ordini & Copia Commissione - Ivy Oxford</p>
+      <p>Copia Commissione Intimo - Ivy Oxford</p>
     </header>
 
     <!-- Dati Cliente e Ordine -->
@@ -27,16 +27,12 @@
           <input type="text" id="citta" placeholder="Città">
         </div>
         <div>
-          <label>P.IVA:</label>
-          <input type="text" id="piva" placeholder="Partita IVA">
-        </div>
-        <div>
-          <label>Codice Univoco / SDI:</label>
-          <input type="text" id="sdi" placeholder="Codice SDI">
-        </div>
-        <div>
-          <label>Data:</label>
+          <label>Data Ordine:</label>
           <input type="date" id="data">
+        </div>
+        <div>
+          <label>Data Consegna:</label>
+          <input type="date" id="dataConsegna">
         </div>
         <div>
           <label>Stagione:</label>
@@ -59,7 +55,7 @@
             <th>Colli</th>
             <th>Prezzo (€)</th>
             <th>Totale (€)</th>
-            <th>Azione</th>
+            <th class="no-print">Azione</th>
           </tr>
         </thead>
         <tbody id="tableBody">
@@ -67,7 +63,7 @@
         </tbody>
       </table>
 
-      <button class="btn-add" onclick="addRow()">+ Aggiungi Articolo</button>
+      <button class="btn-add no-print" onclick="addRow()">+ Aggiungi Articolo</button>
     </section>
 
     <!-- Riepilogo e Totali -->
@@ -80,8 +76,8 @@
       </div>
     </section>
 
-    <div class="actions">
-      <button class="btn-submit" onclick="saveOrder()">Salva Ordine</button>
+    <div class="actions no-print">
+      <button class="btn-submit" onclick="printPDF()">Stampa / Scarica PDF</button>
     </div>
   </div>
 
