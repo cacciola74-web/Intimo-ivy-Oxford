@@ -135,3 +135,35 @@ td input {
 .btn-submit:hover {
   background-color: #1f6391;
 }
+
+/* REGOLAZIONE PER LA STAMPA / PDF */
+@media print {
+  body {
+    background-color: #fff;
+    padding: 0;
+  }
+
+  .container {
+    box-shadow: none;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  /* Nasconde le righe senza colli inseriti */
+  tr.hide-on-print {
+    display: none !important;
+  }
+
+  input {
+    border: none !important;
+    background: transparent !important;
+  }
+
+  th, td {
+    border: 1px solid #000 !important;
+  }
+}
