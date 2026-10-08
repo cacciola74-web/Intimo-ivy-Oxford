@@ -1,6 +1,6 @@
 const initialItems = [
-  { art: "11-26-S001-16", desc: "SLIP COTONE", comp: "COTONE", ass: "S-M-L-XL-XXL", conf: 16, colli: "", prezzo: 9.90 },
-  { art: "11-26-S002-16", desc: "SLIP COTONE", comp: "COTONE", ass: "S-M-L-XL-XXL", conf: 16, colli: "", prezzo: 9.90 },
+  { art: "II-26-S001-16", desc: "SLIP COTONE", comp: "COTONE", ass: "S-M-L-XL-XXL", conf: 16, colli: "", prezzo: 9.90 },
+  { art: "II-26-S002-16", desc: "SLIP COTONE", comp: "COTONE", ass: "S-M-L-XL-XXL", conf: 16, colli: "", prezzo: 9.90 },
   { art: "II-26-S003-16", desc: "SLIP COTONE", comp: "COTONE", ass: "S-M-L-XL-XXL", conf: 16, colli: "", prezzo: 9.90 },
   { art: "II-26-S004-16", desc: "SLIP COTONE", comp: "COTONE", ass: "S-M-L-XL-XXL", conf: 16, colli: "", prezzo: 9.90 },
   { art: "II-26-B001-16", desc: "BOXER COTONE", comp: "COTONE", ass: "S-M-L-XL-XXL", conf: 16, colli: "", prezzo: 9.90 },
@@ -52,7 +52,7 @@ function calculateTotals() {
     const colli = parseFloat(colliInput) || 0;
     const prezzo = parseFloat(row.querySelector(".prezzo").value) || 0;
 
-    // Se i colli sono vuoti o 0, nasconde la riga in fase di stampa
+    // Nasconde la riga durante la stampa se i colli non sono stati inseriti
     if (colli <= 0) {
       row.classList.add("hide-on-print");
     } else {
